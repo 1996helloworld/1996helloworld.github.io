@@ -86,7 +86,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '6.4.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -328,7 +328,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/08/14/中文博客/" itemprop="url">
-                  中文博客
+                  Hexo博客搭建注意事项
                 </a>
               
             
@@ -354,12 +354,24 @@
                 
               
 
-              <time title="创建时间：2018-08-14 16:25:59 / 修改时间：16:41:27" itemprop="dateCreated datePublished" datetime="2018-08-14T16:25:59+08:00">2018-08-14</time>
+              <time title="创建时间：2018-08-14 16:25:59" itemprop="dateCreated datePublished" datetime="2018-08-14T16:25:59+08:00">2018-08-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-04 16:37:39" itemprop="dateModified" datetime="2018-09-04T16:37:39+08:00">2018-09-04</time>
               
             
           </span>
@@ -411,7 +423,7 @@
 
       
         
-          <h3 id="桃花源记"><a href="#桃花源记" class="headerlink" title="桃花源记"></a>桃花源记</h3><h2 id="朝代：魏晋"><a href="#朝代：魏晋" class="headerlink" title="朝代：魏晋"></a>朝代：魏晋</h2><h2 id="作者：陶渊明"><a href="#作者：陶渊明" class="headerlink" title="作者：陶渊明"></a>作者：陶渊明</h2><h2 id="原文："><a href="#原文：" class="headerlink" title="原文："></a>原文：</h2>
+          <h3 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/14/中文博客/#more" rel="contents">
@@ -516,12 +528,24 @@
                 
               
 
-              <time title="创建时间：2018-08-14 11:25:59 / 修改时间：16:43:03" itemprop="dateCreated datePublished" datetime="2018-08-14T11:25:59+08:00">2018-08-14</time>
+              <time title="创建时间：2018-08-14 11:25:59" itemprop="dateCreated datePublished" datetime="2018-08-14T11:25:59+08:00">2018-08-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-08-31 15:28:11" itemprop="dateModified" datetime="2018-08-31T15:28:11+08:00">2018-08-31</time>
               
             
           </span>
@@ -574,11 +598,7 @@
       
         
           
-            <h3 id="乡愁"><a href="#乡愁" class="headerlink" title="乡愁"></a>乡愁</h3><h2 id="余光中"><a href="#余光中" class="headerlink" title="余光中"></a>余光中</h2><p>小时候，<br>乡愁是一枚小小的邮票，<br>我在这头，<br>母亲在那头。</p>
-<p>长大后，<br>乡愁是一张窄窄的船票，<br>我在这头，<br>新娘在那头。</p>
-<p>后来啊，<br>乡愁是一方矮矮的坟墓，<br>我在外头，<br>母亲在里头。</p>
-<p>而现在，<br>乡愁是一湾浅浅的海峡，<br>我在这头，<br>大陆在那头。</p>
-
+            <h3 id="乡愁"><a href="#乡愁" class="headerlink" title="乡愁"></a>乡愁</h3><h2 id="余光中"><a href="#余光中" class="headerlink" title="余光中"></a>余光中</h2>
           
         
       
@@ -697,7 +717,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -802,6 +826,8 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+          <span id="scrollpercent"><span>0</span>%</span>
+        
       </div>
     
 
@@ -833,6 +859,8 @@
 
 
 
+  
+
 
 
 
@@ -858,6 +886,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -931,5 +964,8 @@
 
   
 
+  
+  <script type="text/javascript" src="/js/src/checkclick.js"></script>
+  
 </body>
 </html>

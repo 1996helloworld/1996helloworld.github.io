@@ -1756,6 +1756,10 @@ pre .javascript .function {
   height: auto;
   border: 1px solid #eee;
   opacity: 1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  transition: 1.4s all;
 }
 img:hover {
   -webkit-transform: rotateZ(360deg);
@@ -1778,6 +1782,12 @@ img:hover {
   text-align: center;
   font-size: 13px;
   color: #999;
+}
+.site-author-image:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -transform: rotate(360deg);
 }
 .site-state {
   overflow: hidden;
@@ -1849,7 +1859,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0d2412;
+  background: #dab0ff;
 }
 .links-of-blogroll {
   font-size: 13px;

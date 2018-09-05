@@ -108,24 +108,30 @@
 
 
 
-  <meta name="description" content="&amp;lt;!DOCTYPE HTML&amp;gt;">
-<meta property="og:type" content="website">
-<meta property="og:title" content="404">
-<meta property="og:url" content="http://www.pixiechang.cn/404.html">
+  <meta name="description" content="故障原因80端口一般被当做网页服务器的默认端口，使用本机搭建服务器环境的时候，都会默认使用80端口来作为网页访问端，但是有的时候80端口会被其他的不明身份的程序占用，导致 IIS上网站 启动失败，修改 网站 的默认端口后访问本机地址又非常麻烦。下面介绍一下如果80端口被占用后应该如何处理。">
+<meta name="keywords" content="技术宅,Microsoft">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决Windows Server上80端口占用">
+<meta property="og:url" content="http://www.pixiechang.cn/2018/09/05/port/index.html">
 <meta property="og:site_name" content="吴于杰的博客">
-<meta property="og:description" content="&amp;lt;!DOCTYPE HTML&amp;gt;">
+<meta property="og:description" content="故障原因80端口一般被当做网页服务器的默认端口，使用本机搭建服务器环境的时候，都会默认使用80端口来作为网页访问端，但是有的时候80端口会被其他的不明身份的程序占用，导致 IIS上网站 启动失败，修改 网站 的默认端口后访问本机地址又非常麻烦。下面介绍一下如果80端口被占用后应该如何处理。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-04T09:30:46.349Z">
+<meta property="og:image" content="http://47.97.172.246/HexoImg/port/cmd.png">
+<meta property="og:image" content="http://47.97.172.246/HexoImg/port/jincheng.png">
+<meta property="og:image" content="http://47.97.172.246/HexoImg/port/id.png">
+<meta property="og:image" content="http://47.97.172.246/HexoImg/port/service.png">
+<meta property="og:updated_time" content="2018-09-05T04:21:58.333Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="404">
-<meta name="twitter:description" content="&amp;lt;!DOCTYPE HTML&amp;gt;">
+<meta name="twitter:title" content="解决Windows Server上80端口占用">
+<meta name="twitter:description" content="故障原因80端口一般被当做网页服务器的默认端口，使用本机搭建服务器环境的时候，都会默认使用80端口来作为网页访问端，但是有的时候80端口会被其他的不明身份的程序占用，导致 IIS上网站 启动失败，修改 网站 的默认端口后访问本机地址又非常麻烦。下面介绍一下如果80端口被占用后应该如何处理。">
+<meta name="twitter:image" content="http://47.97.172.246/HexoImg/port/cmd.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://www.pixiechang.cn/404.html"/>
+  <link rel="canonical" href="http://www.pixiechang.cn/2018/09/05/port/"/>
 
 
 
@@ -135,7 +141,7 @@
   };
 </script>
 
-  <title>404 | 吴于杰的博客</title>
+  <title>解决Windows Server上80端口占用 | 吴于杰的博客</title>
   
 
 
@@ -288,77 +294,194 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.pixiechang.cn/2018/09/05/port/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wuyujie">
+      <meta itemprop="description" content="生本平凡,明天你好;">
+      <meta itemprop="image" content="http://47.97.172.246/images/997157.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="吴于杰的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">404</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>&lt;!DOCTYPE HTML&gt;</p>
-<html><br><head><br>  <meta http-equiv="content-type" content="text/html;charset=utf-8;"><br>  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><br>  <meta name="robots" content="all"><br>  <meta name="robots" content="index,follow"><br>  <link rel="stylesheet" type="text/css" href="https://qzone.qq.com/gy/404/style/404style.css"><br></head><br><body><br>  <script type="text/plain" src="http://www.qq.com/404/search_children.js" charset="utf-8" homepageurl="/" homepagename="回到我的主页"><br>  </script><br>  <script src="https://qzone.qq.com/gy/404/data.js" charset="utf-8"></script><br>  <script src="https://qzone.qq.com/gy/404/page.js" charset="utf-8"></script><br></body><br></html>
+          <h1 class="post-title" itemprop="name headline">解决Windows Server上80端口占用
+              
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-05 11:37:59 / 修改时间：12:21:58" itemprop="dateCreated datePublished" datetime="2018-09-05T11:37:59+08:00">2018-09-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/系统故障/" itemprop="url" rel="index"><span itemprop="name">系统故障</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h3 id="故障原因"><a href="#故障原因" class="headerlink" title="故障原因"></a>故障原因</h3><p>80端口一般被当做网页服务器的默认端口，使用本机搭建服务器环境的时候，都会默认使用80端口来作为网页访问端，但是有的时候80端口会被其他的不明身份的程序占用，导致 IIS上网站 启动失败，修改 网站 的默认端口后访问本机地址又非常麻烦。下面介绍一下如果80端口被占用后应该如何处理。<br><a id="more"></a></p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><h2 id="找到占用端口的程序"><a href="#找到占用端口的程序" class="headerlink" title="找到占用端口的程序"></a>找到占用端口的程序</h2><p>首先打开命令提示符输入<code>netsh http show servicestate</code><br>可以看到本机所有端口的使用情况，一般80端口在第一行，记下版本<br><img src="http://47.97.172.246/HexoImg/port/cmd.png" alt=""><br>然后，往下找，找到与上面对应的版本<br><img src="http://47.97.172.246/HexoImg/port/jincheng.png" alt=""><br>打开任务管理器，选择详细信息，找到对应的进程，然后右键转到服务<br><img src="http://47.97.172.246/HexoImg/port/id.png" alt=""><br>然后停止该服务<br><img src="http://47.97.172.246/HexoImg/port/service.png" alt=""><br>最后80端口就解除占用了  </p>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/技术宅/" rel="tag"># 技术宅</a>
+          
+            <a href="/tags/Microsoft/" rel="tag"># Microsoft</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/14/中文博客/" rel="next" title="Hexo博客搭建注意事项">
+                <i class="fa fa-chevron-left"></i> Hexo博客搭建注意事项
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -379,8 +502,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -483,6 +615,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#故障原因"><span class="nav-number">1.</span> <span class="nav-text">故障原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#找到占用端口的程序"><span class="nav-number"></span> <span class="nav-text">找到占用端口的程序</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
